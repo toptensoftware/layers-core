@@ -1,11 +1,11 @@
-# layers.core
+# layers-core
 
 Core layers library
 
 ## Installation
 
 ```
-npm install --save toptensoftware/layers.core
+npm install --save toptensoftware/layers-core
 ```
 
 

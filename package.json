@@ -1,5 +1,5 @@
 {
-  "name": "@toptensoftware/layers.core",
+  "name": "@toptensoftware/layers-core",
   "description": "A library for implementing switchable user-interface layers on hardware input devices (eg: macropads, streamdeck, midi devices etc...)",
   "version": "1.0.0",
   "main": "index.js",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/toptensoftware/layers.core"
+    "url": "https://github.com/toptensoftware/layers-core"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
