@@ -95,7 +95,7 @@ export class Group
         this.nextOrPrev(1, wrap); 
     }
 
-    prev(wrap)
+    previous(wrap)
     { 
         this.nextOrPrev(-1, wrap); 
     }
