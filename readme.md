@@ -47,9 +47,9 @@ install a hook when activated and remove the hook when deactivated.
 This core library doesn't provide any binding objects, see these associated projects:
 
 * [`layers-keyboard`](https://github.com/toptensoftware/layers-keyboard) - Windows key bindings
-* [`layers-rmp`](https://github.com/toptensoftware/layers-rmp) - Raw macropad support
 * [`layers-streamdeck`](https://github.com/toptensoftware/layers-streamdeck) - StreamDeck support
-* `layers-midi` - coming soon
+* `layers-rmp` - Raw macropad support (coming soon)
+* `layers-midi` - MIDI controller support (coming soon)
 
 By default a layers are inactive and must be explicitly activated for its contained bindings
 work.
