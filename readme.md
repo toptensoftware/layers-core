@@ -22,8 +22,8 @@ A layer is a simple object that maintains a set of control bindings:
 import { Layer } from "@toptensoftware/layers-core";
 import { key } from "@toptensoftware/layers-keyboard";
 
-// Create layer and add handlers
-let myLayer = new Layer();
+// Create layer and add bindings
+let myLayer = new Layer()
     .add(key({
         key: "F13"
         press: () => console.log("F13 pressed")
@@ -51,7 +51,7 @@ This core library doesn't provide any binding objects, see these associated proj
 * [`layers-streamdeck`](https://github.com/toptensoftware/layers-streamdeck) - StreamDeck support
 * `layers-midi` - coming soon
 
-By default a layer is deactivated and must be explicitly activated for it's contained bindings
+By default a layers are inactive and must be explicitly activated for its contained bindings
 work.
 
 A layer can be configured to run code when it is activated by adding an object with the appropriate
