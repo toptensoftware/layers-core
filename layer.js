@@ -16,9 +16,9 @@ export class Layer
         return this.#name;
     }
 
-    add(handler, ...args)
+    add(...handlers)
     {
-        this.#handlers.push({ handler, args });
+        this.#handlers.push(handlers);
         return this;
     }
 
@@ -30,7 +30,7 @@ export class Layer
 
         for (let e of this.#handlers)
         {
-            e.handler.onActivate?.(...e.args);
+            e.onActivate?.();
         }
     }
 
@@ -42,7 +42,7 @@ export class Layer
 
         for (let e of this.#handlers)
         {
-            e.handler.onDeactivate?.(...e.args);
+            e.onDeactivate?.();
         }
     }
 }

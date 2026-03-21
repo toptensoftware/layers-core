@@ -40,9 +40,9 @@ export class Group
             this.#activeLayer?.activate();  
     }
 
-    add(layer)
+    add(...layers)
     {
-        this.#layers.push(layer);
+        this.#layers.push(...layers);
         return this;
     }
 
