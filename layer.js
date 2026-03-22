@@ -18,7 +18,7 @@ export class Layer
 
     add(...handlers)
     {
-        this.#handlers.push(handlers);
+        this.#handlers.push(...handlers);
         return this;
     }
 
