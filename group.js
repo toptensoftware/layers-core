@@ -46,8 +46,21 @@ export class Group
         return this;
     }
 
+    activate()
+    {
+        if (!this.#isActive)
+            this.onActivate();
+    }    
+
+    deactivate()
+    {
+        if (this.#isActive)
+            this.onDeactivate();
+    }
+
     onActivate()
     {
+        this.#isActive = true;
         if (!this.#activeLayer && this.#layers.length > 0)
             this.#activeLayer = this.#layers[0];
 

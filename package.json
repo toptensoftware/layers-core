@@ -1,7 +1,7 @@
 {
   "name": "@toptensoftware/layers-core",
   "description": "A library for implementing switchable user-interface layers on hardware input devices (eg: macropads, streamdeck, midi devices etc...)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "type": "module",
   "author": "Topten Software",

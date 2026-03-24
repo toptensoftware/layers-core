@@ -18,16 +18,48 @@ export class Layer
 
     add(...handlers)
     {
+        // Add to list
         this.#handlers.push(...handlers);
+
+        // Activate 
+        if (this.#active)
+        {
+            for (let e of handlers)
+            {
+                e.onActivate?.();
+            }
+        }
+
         return this;
+    }
+
+    remove(...handlers)
+    {
+        for (let h of handlers)
+        {
+            // Find it
+            let index = this.#handlers.indexOf(h);
+            if (index >= 0)
+            {
+                // Deactivate 
+                if (this.#active)
+                    h.onDeactivate?.();
+
+                // Remove
+                this.#handlers.splice(index, 1);
+            }
+        }
     }
 
     activate()
     {
-        if (this.#active)
-            return;
-        this.#active = true;
+        if (!this.#active)
+            this.onActivate();
+    }
 
+    onActivate()
+    {
+        this.#active = true;
         for (let e of this.#handlers)
         {
             e.onActivate?.();
@@ -36,10 +68,13 @@ export class Layer
 
     deactivate()
     {
-        if (!this.#active)
-            return;
-        this.#active = false;
+        if (this.#active)
+            this.onDeactivate();
+    }
 
+    onDeactivate()
+    {
+        this.#active = false;
         for (let e of this.#handlers)
         {
             e.onDeactivate?.();
